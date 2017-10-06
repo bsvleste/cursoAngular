@@ -13,4 +13,26 @@
     <h2>Outro mode de interpolaçcao</h2>
     <img [src]="urlImagem" >
   </article>
+  
+  <article>
+    <h2>Class e style binding css</h2>
+    <select name="" id="" #classe (change) ="0">
+      <option>Selecione um alerta</option>
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">info</option>
+      <option value="alert-warning">Alerta</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+    <br><br>
+    
+    <div class="alert {{classe.value}}" role="alert">Texto conforme selecionado</div>
+    
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Sucesso</div>
+    <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">info</div>
+    <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+
+    <div class="alert alert-success" role="alert" [style.display]= "classe.value == 'alert-success' ? 'block' : 'none'">so aparece casso seja sucesso</div>
+  </article>
+
 </section>
