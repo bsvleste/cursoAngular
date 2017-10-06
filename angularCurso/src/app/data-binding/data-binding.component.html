@@ -1,0 +1,16 @@
+<section>
+  <article>
+    <h3>Interpolação</h3>
+    <p>nosso site : {{ url }}</p>
+    <p>Expressao dentro da interpolacao 1 + 1 : {{ 1+1 + getValor() }}</p>
+    <p>Curso de angular = {{ cursoAngular && getCurtirCurso() }}</p>
+  
+  </article>
+
+  <article>
+    <h1>Property Binding</h1>
+    <img src="{{ urlImagem }}" >
+    <h2>Outro mode de interpolaçcao</h2>
+    <img [src]="urlImagem" >
+  </article>
+</section>
