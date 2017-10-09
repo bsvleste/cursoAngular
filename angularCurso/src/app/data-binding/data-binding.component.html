@@ -83,6 +83,8 @@
   <article>
     <h3>Input /Output Properties</h3>
     <app-input-property [nome]="nomeCurso"></app-input-property>
+    <app-input-pro [pessoa]="pessoa"></app-input-pro>
+    <contador valor="10" (mudouValor)="onMudouValor($event)"></contador>
     <h3>SAbonete</h3>
   </article>
 

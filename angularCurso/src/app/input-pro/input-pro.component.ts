@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-input-pro',
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputProComponent implements OnInit {
 
+  @Input('pessoa') pessoa:string = '';
   constructor() { }
-
+  
   ngOnInit() {
   }
 

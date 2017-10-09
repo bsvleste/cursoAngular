@@ -22,7 +22,11 @@ export class DataBindingComponent implements OnInit {
     idade:32
   }
   constructor() { }
-  
+
+  onMudouValor(event)
+  {
+    console.log("mudou valor" + event);
+  }  
   onMouseOverOut()
   {
     this.inMouseOver = !this.inMouseOver;

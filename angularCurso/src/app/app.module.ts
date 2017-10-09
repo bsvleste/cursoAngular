@@ -8,6 +8,7 @@ import {CursosService} from './cursos/cursos.service';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropertyComponent } from './input-property/input-property.component';
 import { InputProComponent } from './input-pro/input-pro.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InputProComponent } from './input-pro/input-pro.component';
     MeuPrimeiroComponent,
     DataBindingComponent,
     InputPropertyComponent,
-    InputProComponent
+    InputProComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
