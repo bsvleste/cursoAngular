@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Curso Angular';
+  valorInicial:number = 50;
+  deletarCiclo:boolean = false;
+  mudarValor()
+  {
+    
+    this.valorInicial ++;
+    this.deletarCiclo =false;
+  }
+  deleteCiclo()
+  {
+    this.deletarCiclo = true;
+  }
 }
