@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -12,6 +12,13 @@ export class DataBindingComponent implements OnInit {
   urlImagem = "http://lorempixel.com/400/200/sports/Dummy-Text/";
   cursoAngular:boolean = true;
   inMouseOver:boolean = false;
+
+  nome: string = "abc";
+
+  pessoa: any = {
+    nome:"Bruno",
+    idade:32
+  }
   constructor() { }
   
   onMouseOverOut()

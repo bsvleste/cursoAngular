@@ -35,6 +35,7 @@
 
     <div class="alert alert-success" role="alert" [style.display]= "classe.value == 'alert-success' ? 'block' : 'none'">so aparece casso seja sucesso</div>
   </article>-->
+  <!--
   <article>
     <h1>Event databinding</h1>
     <div>
@@ -53,6 +54,30 @@
     [class.info] = "inMouseOver"
     >Passe o mouse sobre mim</span>
   </div>
-  </article>
+  </article>-->
+  <section>
+    <article>
+      <h2>Two-way data binding</h2>
+      <div>
+      <input type="text"  
+      [value] = "nome"
+      (input)="nome = $event.target.value" />
+              
+      <input type="text"  
+      [ngModel] = "nome"
+      (input)="nome = $event.target.value" />
+      
+      <input type="text"[(ngModel)] = "nome" />
+      
+      <p>Voce Digito o : {{ nome }}</p>        
+      </div>
+
+      <div>
+        <h2>Two-way com objeto</h2>
+        <input type="text" [(ngModel)] ="pessoa.nome">
+        <input type="text" [(ngModel)] ="pessoa.idade">
+      </div>
+    </article>
+  </section>
 
 </section>
