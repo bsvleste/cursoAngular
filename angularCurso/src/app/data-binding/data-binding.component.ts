@@ -7,10 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
   url = "http://colisao.com.br";
-  
+  valorString = "";
+  valorStringSalva ="";
   urlImagem = "http://lorempixel.com/400/200/sports/Dummy-Text/";
   cursoAngular:boolean = true;
+  inMouseOver:boolean = false;
   constructor() { }
+  
+  onMouseOverOut()
+  {
+    this.inMouseOver = !this.inMouseOver;
+  }
+  salvaString(valor)
+  {
+    this.valorStringSalva = valor;
+  }
+  onKeyUp(evento: KeyboardEvent)
+  {
+    this.valorString = (<HTMLInputElement>evento.target).value;
+    
+  }
+  getButtonCLick()
+  {
+    alert("Botao Clicado");
+  }
   getValor()
   {
     return 1 ;
