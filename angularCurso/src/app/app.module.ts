@@ -12,6 +12,7 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasNgifComponent } from './diretivas-ngif/diretivas-ngif.component';
 import { DiretivasNgswitchComponent } from './diretivas-ngswitch/diretivas-ngswitch.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DiretivasNgswitchComponent } from './diretivas-ngswitch/diretivas-ngswi
     OutputPropertyComponent,
     CicloComponent,
     DiretivasNgifComponent,
-    DiretivasNgswitchComponent
+    DiretivasNgswitchComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
