@@ -10,6 +10,7 @@ import { InputPropertyComponent } from './input-property/input-property.componen
 import { InputProComponent } from './input-pro/input-pro.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { CicloComponent } from './ciclo/ciclo.component';
+import { DiretivasNgifComponent } from './diretivas-ngif/diretivas-ngif.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CicloComponent } from './ciclo/ciclo.component';
     InputPropertyComponent,
     InputProComponent,
     OutputPropertyComponent,
-    CicloComponent
+    CicloComponent,
+    DiretivasNgifComponent
   ],
   imports: [
     BrowserModule,
