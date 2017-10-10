@@ -1,0 +1,21 @@
+<h1>Sem ng Class</h1>
+<div>
+  <h1 (click)="onMeuFavorito()">
+    <i class="glyphicon" [class.glyphicon-star-empty]="!meuFavorito"
+                         [class.glyphicon-star]="meuFavorito"  ></i>
+  </h1>
+</div>
+<h1>Com ng Class</h1>
+<div>
+  <h1 (click)="onMeuFavorito()">
+    <i class="glyphicon" 
+    [ngClass]="{
+      'glyphicon-star-empty':!meuFavorito,
+      'glyphicon-star':meuFavorito
+    }"></i>
+  </h1>
+</div>
+<h1>Ng style</h1>
+<button [style.backgroundColor]="ativo ?'blue' : 'gray'"[style.color]="ativo ? 'white': 'red'" (click)='onAtivo()'>Muda Atribruto</button>
+<button [ngStyle]="{'backgroundColor':(ativo ? 'red': 'blue')}"
+                   (click)='onAtivo()'>Muda Atribruto</button>
