@@ -14,6 +14,7 @@ import { DiretivasNgifComponent } from './diretivas-ngif/diretivas-ngif.componen
 import { DiretivasNgswitchComponent } from './diretivas-ngswitch/diretivas-ngswitch.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { DiretivaNgClassComponent } from './diretiva-ng-class/diretiva-ng-class.component';
+import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DiretivaNgClassComponent } from './diretiva-ng-class/diretiva-ng-class.
     DiretivasNgifComponent,
     DiretivasNgswitchComponent,
     NgForComponent,
-    DiretivaNgClassComponent
+    DiretivaNgClassComponent,
+    OperadorElvisComponent
   ],
   imports: [
     BrowserModule,

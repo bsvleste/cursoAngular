@@ -1,0 +1,10 @@
+<p>
+Descricao: {{ tarefa.descricao}}
+</p>
+
+<p>
+  responsavel: {{ tarefa.responsavel != null ? tarefa.responsavel.nome : 'Sem nome' }}
+</p>
+<h2>Codigo mais Elegante</h2>
+<p> Usuario: {{ tarefa.responsavel?.nome }}</p>
+<p> responsavel: {{ tarefa.responsavel?.usuario }}</p>
