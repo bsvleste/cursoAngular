@@ -18,6 +18,7 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
 import { NgComponentComponent } from './ng-component/ng-component.component';
 import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivaComponent } from './diretiva/diretiva.component';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DiretivaComponent } from './diretiva/diretiva.component';
     OperadorElvisComponent,
     NgComponentComponent,
     FundoAmareloDirective,
-    DiretivaComponent
+    DiretivaComponent,
+    HighlightMouseDirective
   ],
   imports: [
     BrowserModule,
