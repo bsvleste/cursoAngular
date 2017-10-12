@@ -15,6 +15,7 @@ import { DiretivasNgswitchComponent } from './diretivas-ngswitch/diretivas-ngswi
 import { NgForComponent } from './ng-for/ng-for.component';
 import { DiretivaNgClassComponent } from './diretiva-ng-class/diretiva-ng-class.component';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
+import { NgComponentComponent } from './ng-component/ng-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
     DiretivasNgswitchComponent,
     NgForComponent,
     DiretivaNgClassComponent,
-    OperadorElvisComponent
+    OperadorElvisComponent,
+    NgComponentComponent
   ],
   imports: [
     BrowserModule,
