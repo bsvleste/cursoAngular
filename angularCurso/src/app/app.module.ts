@@ -20,6 +20,8 @@ import { FundoAmareloDirective } from './shared/fundo-amarelo.directive';
 import { DiretivaComponent } from './diretiva/diretiva.component';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
+import { NgElseDirective } from './shared/ng-else.directive';
+import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HighlightDirective } from './shared/highlight.directive';
     FundoAmareloDirective,
     DiretivaComponent,
     HighlightMouseDirective,
-    HighlightDirective
+    HighlightDirective,
+    NgElseDirective,
+    CriarCursoComponent
   ],
   imports: [
     BrowserModule,

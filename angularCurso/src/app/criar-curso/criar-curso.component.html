@@ -1,0 +1,8 @@
+<h3>Criar um novo curso</h3>
+<input type="text" #cursoNome>
+<button (click)="criarCurso(cursoNome.value)" class="btn btn-primary">Cadastar Curso</button>
+<div>
+  <ul>
+      <li *ngFor="let cursos of cursos">{{cursos}}</li>
+  </ul>
+</div>
