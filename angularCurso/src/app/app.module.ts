@@ -1,3 +1,4 @@
+import { CriarCursoModule } from './criar-curso/criar-curso.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -21,7 +22,7 @@ import { DiretivaComponent } from './diretiva/diretiva.component';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { NgElseDirective } from './shared/ng-else.directive';
-import { CriarCursoComponent } from './criar-curso/criar-curso.component';
+
 
 @NgModule({
   declarations: [
@@ -43,14 +44,15 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
     HighlightMouseDirective,
     HighlightDirective,
     NgElseDirective,
-    CriarCursoComponent
+    
   ],
   imports: [
     BrowserModule,
     CursosModule,
-    FormsModule
+    FormsModule,
+    CriarCursoModule
   ],
-  providers: [CursosService],
+  /*providers: [CursosService],*/
   bootstrap: [AppComponent]
 })
 export class AppModule { }
