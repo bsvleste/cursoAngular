@@ -1,6 +1,6 @@
 import { CriarCursoModule } from './criar-curso/criar-curso.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule , LOCALE_ID} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
@@ -22,6 +22,8 @@ import { DiretivaComponent } from './diretiva/diretiva.component';
 import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { NgElseDirective } from './shared/ng-else.directive';
+import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
+import { CamelCasePipe } from './camel-case.pipe';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { NgElseDirective } from './shared/ng-else.directive';
     HighlightMouseDirective,
     HighlightDirective,
     NgElseDirective,
+    ExemplosPipesComponent,
+    CamelCasePipe,
     
   ],
   imports: [
@@ -52,7 +56,12 @@ import { NgElseDirective } from './shared/ng-else.directive';
     FormsModule,
     CriarCursoModule
   ],
-  /*providers: [CursosService],*/
+  providers: [
+    {
+      provide:LOCALE_ID,
+      useValue:'pt-Br'       
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
