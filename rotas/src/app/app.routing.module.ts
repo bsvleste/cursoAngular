@@ -11,9 +11,6 @@ const appRoutes:Routes = [
     { path:'', component:HomeComponent},
     { path:'login', component:LoginComponent},
     { path:'home', component:HomeComponent},
-    { path:'cursos', component:CursosComponent},
-    { path:'404', component:CursoNaoEncontradoComponent},
-    { path:'curso/:id', component:CursoDetalheComponent},
 ];
 
 @NgModule({

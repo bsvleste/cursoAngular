@@ -1,3 +1,4 @@
+import { CursosRoutingModule } from './cursos.routing';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -13,8 +14,8 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         FormsModule,
         HttpModule,
-        RouterModule
-    ],
+        CursosRoutingModule
+        ],
     declarations:[
         CursosComponent,
         CursoDetalheComponent,
