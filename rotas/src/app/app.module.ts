@@ -12,20 +12,23 @@ import { LoginComponent } from './login/login.component';
 import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
 import { CursoService } from './cursos/curso.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
+import { AlunosModule } from './alunos/alunos.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+   
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    CursosModule,    
+    CursosModule,
+    AlunosModule    
   ],
   providers: [CursoService],
   bootstrap: [AppComponent]
