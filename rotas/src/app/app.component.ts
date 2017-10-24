@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'app';
   mostrarMenu:boolean = false;
   constructor(private authService:AuthService){}
-  ngOnit()
+  ngOnInit()
   {
     this.authService.mostraMenuEmmiter.subscribe(
       mostrar =>this.mostrarMenu = mostrar
