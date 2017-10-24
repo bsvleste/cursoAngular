@@ -29,7 +29,7 @@ export class CursoDetalheComponent implements OnInit {
         this.cursos = this.cursosSercice.getCurso(this.id);
         if(this.cursos ==null)
         {
-          this.router.navigate(['/404']);   
+          this.router.navigate(['/cursos/404']);   
         }
       }
     );

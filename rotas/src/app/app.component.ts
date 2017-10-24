@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,4 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   id:string[] = ['1','2','3'];
   title = 'app';
+  mostrarMenu:boolean = false;
+  constructor(private authService:AuthService){}
+  ngOnit()
+  {
+    this.authService.mostraMenuEmmiter.subscribe(
+      mostrar =>this.mostrarMenu = mostrar
+    );
+  }
 }

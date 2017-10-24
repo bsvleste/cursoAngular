@@ -7,7 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 
 const alunosRoutes:Routes = [
     //adicionando rotas filhas
-    { path:'alunos', component:AlunosComponent, children:[
+        { path:'', component:AlunosComponent, children:[
         { path:'novo', component:AlunosFormComponent},
         { path:':id', component:AlunosDetalheComponent},
         { path:':id/edit', component:AlunosFormComponent}
