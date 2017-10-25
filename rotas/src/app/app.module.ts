@@ -12,6 +12,7 @@ import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.comp
 import { AuthService } from './login/auth.service';
 import { CursoService } from './cursos/curso.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
+import { AuthGuard } from './guard/auth-guard';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
