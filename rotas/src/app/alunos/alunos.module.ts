@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { AlunosComponent } from './alunos.component';
 import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 import { AlunosDetalheComponent } from './alunos-detalhe/alunos-detalhe.component';
+import { AlunosDiactivateGuard } from './alunos-diactivate.guard';
 
 @NgModule({
     imports:[
@@ -22,6 +23,9 @@ import { AlunosDetalheComponent } from './alunos-detalhe/alunos-detalhe.componen
         AlunosFormComponent,
         AlunosDetalheComponent
     ],
-    providers:[AlunosService]
+    providers:[
+        AlunosService,
+        AlunosDiactivateGuard
+    ]
 })
 export class AlunosModule{}

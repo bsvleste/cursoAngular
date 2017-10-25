@@ -1,11 +1,11 @@
 <h3>Novo / Editar</h3>
 <div class input-field col s8>
   <label for="nome" class="active">Nome</label>
-  <input [(ngModel)]='alunos.nome' type="text" class="validate" id="nome">
+  <input [(ngModel)]='alunos.nome' type="text" class="validate" id="nome" (input)="onInput()">
 </div>
 <div class input-field col s8>
   <label for="email" class="active">Email</label>
-  <input [(ngModel)]='alunos.email' type="email" class="validate" id="email">
+  <input [(ngModel)]='alunos.email' type="email" class="validate" id="email" >
 </div>
 <button class="btn waves-effect waves-light" type="submit" name='action'>Enviar
   <i class="material-icons right">send</i>

@@ -13,10 +13,10 @@ export class AlunosGuard implements CanActivateChild
         state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean>
     {
         
-        if(state.url.includes('edit'))
+        /*if(state.url.includes('edit'))
         {
             return false;
-        }
+        }*/
         return true;
     }
 

@@ -1,15 +1,19 @@
+import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
-import { CanDeactivate } from '@angular/router';
+import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { AlunosFormComponent } from './alunos-form/alunos-form.component';
 
 @Injectable()
-export class AlunosDiactivateGuard implements CanDeactivate<TeamComponent> {
+export class AlunosDiactivateGuard implements CanDeactivate<AlunosFormComponent> {
         
-        
+        constructor(){}
         canDeactivate(
-            component: TeamComponent,
+            component: AlunosFormComponent,
             route: ActivatedRouteSnapshot,
             state: RouterStateSnapshot
-        ): Observable<boolean>|Promise<boolean>|boolean {
-            return this.permissions.canDeactivate(this.currentUser, route.params.id);
-    }
+        ): Observable<boolean>|Promise<boolean>|boolean 
+        {
+            
+            return component.mudouForm();
+        }
 }
