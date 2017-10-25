@@ -13,6 +13,8 @@ import { AuthService } from './login/auth.service';
 import { CursoService } from './cursos/curso.service';
 import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AuthGuard } from './guard/auth-guard';
+import { CursoGuard } from './guard/cursos-guard';
+import { AlunosGuard } from './guard/alunos-guard';
 
 
 @NgModule({
@@ -28,7 +30,12 @@ import { AuthGuard } from './guard/auth-guard';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [
+    AuthService, 
+    AuthGuard,
+    CursoGuard,
+    AlunosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

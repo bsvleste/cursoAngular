@@ -5,15 +5,19 @@ import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './guard/auth-guard';
+import { CursoGuard } from './guard/cursos-guard';
+import { AlunosGuard } from './guard/alunos-guard';
 
 const appRoutes:Routes = [
     {path:'cursos',
         loadChildren:'app/cursos/cursos.module#CursosModule',
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canActivateChild:[CursoGuard]
     },
     {path:'alunos',
         loadChildren:'app/alunos/alunos.module#AlunosModule',
-        canActivate:[AuthGuard]
+        canActivate:[AuthGuard],
+        canActivateChild:[AlunosGuard]
     },
     { path:'', component:HomeComponent, canActivate:[AuthGuard]},
     { path:'home', component:HomeComponent,canActivate:[AuthGuard]},

@@ -5,7 +5,7 @@ import { Usuario } from './usuario';
 @Injectable()
 export class AuthService {
   private usuarioAutenticado :boolean = false;
-
+  private adm:boolean = false;
   mostraMenuEmmiter = new EventEmitter<boolean>();
   
   constructor(private router:Router) { }
@@ -26,5 +26,5 @@ export class AuthService {
   usuarioLogado()
   {
     return this.usuarioAutenticado;
-  }
+  }  
 }
