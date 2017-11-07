@@ -25,7 +25,7 @@
       <div class="form-group"  >
         <div class="col-sm-3" [ngClass]="aplicaCssError(cep)">
           <label for="cep" class="control-label">CEP</label>
-          <input #cep="ngModel" type="text" class="form-control" id="cep" placeholder="CEP" name="cep" ngModel required (blur)="pesquizaCEP($event.target.value)">
+          <input #cep="ngModel" type="text" class="form-control" id="cep" placeholder="CEP" name="cep" ngModel required (blur)="pesquizaCEP($event.target.value, f)">
           <app-error [mostraError]="verificaCampo(cep)" msgError="CEP è obrigatorio"></app-error>
         </div>
         <div class="col-sm-3"[ngClass]="aplicaCssError(num)">
@@ -44,7 +44,7 @@
           <label for="inputrua3" class="control-label">Rua</label>
         </div>   
         <div class="col-sm-12">
-          <input  #rua="ngModel" type="rua" class="form-control" id="inputrua3" placeholder="Rua" name="rua" ngModel required >
+          <input  #rua="ngModel" type="rua" class="form-control" id="inputrua3" placeholder="Rua" name="rua" ngModel required readonly>
         </div>
       </div>
       <app-error [mostraError]="verificaCampo(rua)" msgError="Rua è obrigatorio"></app-error>

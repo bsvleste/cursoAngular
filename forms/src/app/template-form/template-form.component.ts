@@ -13,7 +13,13 @@ export class TemplateFormComponent implements OnInit {
   
     onSubmit(form)
     {
-      console.log(form);
+      this.http.post('https://httpbin.org/post', JSON.stringify(form.value))
+      .map(res=>res)
+      .subscribe(dados=>{
+        console.log(dados);
+        form.form.reset();
+      }
+    );      
     }
 
   ngOnInit() {
@@ -22,7 +28,7 @@ export class TemplateFormComponent implements OnInit {
   {
     return !campo.valid && campo.touched ;
   }
-  pesquizaCEP(cep)
+  pesquizaCEP(cep, form)
   {
     //variavel nova do cep somente com numeros
     cep = cep.replace(/\D/g, '');
@@ -34,7 +40,7 @@ export class TemplateFormComponent implements OnInit {
       //valida o formato do cep
       if(validacep.test(cep))
       {
-        this.http.get(`//viacep.com.br/ws/${cep}/json`).map(dados=>dados.json()).subscribe(dados=>console.log(dados));
+        this.http.get(`//viacep.com.br/ws/${cep}/json`).map(dados=>dados.json()).subscribe(dados=>this.aplicaDadosForm(dados,form));
       }
     }
   }
@@ -43,5 +49,31 @@ export class TemplateFormComponent implements OnInit {
     return{
       'has-error': this.verificaCampo(campo)      
     }
+  }
+  aplicaDadosForm(dados, form)
+  {
+   /*
+    form.setValue({
+      email:form.value.email,
+      nome:form.value.nome,
+      endereco: {
+        cep: dados.cep,
+        num:'' ,
+        complemento:dados.complemento,
+        rua: dados.logradouro,
+        bairro:dados.bairro ,
+        cidade:dados.localidade,
+        estado: dados.uf
+      }  
+    });*/
+    form.form.patchValue({
+      endereco: {
+        complemento:dados.complemento,
+        rua: dados.logradouro,
+        bairro:dados.bairro ,
+        cidade:dados.localidade,
+        estado: dados.uf
+      }
+    });
   }
 }
