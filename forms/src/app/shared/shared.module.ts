@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,13 +8,20 @@ import { FormDebugComponent } from './form-debug/form-debug.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     ComponentErrorComponent,
     FormDebugComponent
   ],
-  exports:[    
+  exports:[
+    CommonModule,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,    
     ComponentErrorComponent,
     FormDebugComponent
   ]

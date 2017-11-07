@@ -2,13 +2,13 @@
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
     <div class="form-group" [ngClass]="aplicaCssError(email)">
     <div class="col-sm-12">
-        <label for="inputEmail3" class="control-label">Email</label>
+      <label for="inputEmail3" class="control-label">Email</label>
+      <app-error [mostraError]="verificaCampo(email)" msgError="Email è obrigatorio"></app-error>
     </div>   
     <div class="col-sm-12">
       <input  #email="ngModel" type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email" ngModel required email>
     </div>
   </div>
-  <app-error [mostraError]="verificaCampo(email)" msgError="Email è obrigatorio"></app-error>
     
   <div class="form-group" [ngClass]="aplicaCssError(nome)">
       <div class="col-sm-12">

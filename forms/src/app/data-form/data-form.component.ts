@@ -1,6 +1,6 @@
 import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-data-form',
@@ -24,8 +24,8 @@ export class DataFormComponent implements OnInit {
       email: new FormControl(null)
     });*/
     this.formulario = this.formBuilder.group({
-      nome:[null],
-      email:[null]
+      nome:[null,[Validators.required, Validators.minLength(3),Validators.maxLength(20)]],
+      email:[null, [Validators.required, Validators.email]]
     });
   }
   onSubmit()
@@ -36,7 +36,7 @@ export class DataFormComponent implements OnInit {
     .subscribe(dados=>{
       console.log(dados);
       //reseta o form
-      this.resetar();
+      //this.resetar();
     },
     (error:any)=>alert('errro')
   );      
@@ -45,5 +45,14 @@ export class DataFormComponent implements OnInit {
   {
     this.formulario.reset();
   }
-
+  verificaCampo(campo)
+  {
+    return this.formulario.get(campo).valid && this.formulario.get(campo).touched;
+  }
+  aplicaCssError(campo)
+  {
+    return{
+      'has-error': this.verificaCampo(campo)      
+    }
+  }
 }

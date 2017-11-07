@@ -8,11 +8,7 @@ import { DataFormComponent } from './data-form.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    SharedModule,
-    HttpModule
+    SharedModule
   ],
   declarations: [ DataFormComponent]
 })

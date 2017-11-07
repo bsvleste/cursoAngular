@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { TemplateFormModule } from './template-form/template-form.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,10 +16,11 @@ import { DataFormModule } from './data-form/data-form.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
-    TemplateFormModule,
     ReactiveFormsModule,
+    HttpModule,
+    AppRoutingModule,
+    TemplateFormModule,
     DataFormModule
   ],
   providers: [],
